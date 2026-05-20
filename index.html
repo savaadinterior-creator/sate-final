@@ -1,0 +1,1777 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#1A1916"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<title>Interior Designer in Portugal | Alina Savankova Interior Design</title>
+<meta name="description" content="Interior design services in Porto, Lisbon, Braga and across Portugal. Thoughtful interiors for apartments and houses, from layout strategy and concept to furnishing and final atmosphere."/>
+<meta name="keywords" content="interior designer in Portugal, interior design in Porto, interior design in Lisbon, interior design in Braga, interior design services in Portugal, layout planning, furnishing and styling"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,200;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet"/>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:       #F4F4F2;
+  --bg-alt:   #EAEAE7;
+  --bg-dark:  #181818;
+  --ink:      #181818;
+  --ink-2:    #575755;
+  --ink-3:    #969694;
+  --line:     #DFDFE0;
+  --line-2:   #C6C6C8;
+  --accent:   #606060;
+  --serif:    'DM Sans', system-ui, sans-serif;
+  --sans:     'DM Sans', system-ui, sans-serif;
+  --page-x: 48px;
+  --section-label-w: 200px;
+  --section-label-pad: 0px;
+  --section-content-pad: 56px;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; background: #1A1916; }
+body { font-family: var(--sans); font-weight: 300; background: var(--bg); color: var(--ink); -webkit-font-smoothing: antialiased; line-height: 1.7; }
+
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; font-family: var(--sans); }
+
+.label {
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--ink-3); font-weight: 400; font-family: var(--sans);
+}
+
+/* ─── HEADER ─── */
+header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 var(--page-x); height: 72px;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+header.scrolled {
+  background: rgba(244,244,242,0.96);
+  border-bottom-color: var(--line);
+  box-shadow: 0 1px 20px rgba(24,24,24,0.04);
+}
+
+.brand {
+  font-family: var(--sans); font-size: 18px; font-weight: 800;
+  letter-spacing: 0.06em; text-transform: uppercase; color: #fff;
+  line-height: 1; transition: color 0.5s;
+  text-shadow: 0 1px 18px rgba(0,0,0,0.24);
+}
+.brand em {
+  display: block; margin-top: 7px; font-style: normal;
+  font-size: 9px; font-weight: 400; letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.5); transition: color 0.5s;
+}
+@media (min-width: 769px) {
+  .brand { transform: translateY(-7px); }
+}
+header.scrolled .brand {
+  color: var(--ink);
+  text-shadow: none;
+}
+header.scrolled .brand em {
+  color: var(--ink-3);
+  text-shadow: none;
+}
+
+nav { display: flex; gap: 30px; margin-left: auto; margin-right: 24px; transform: translateY(-7px); }
+nav a {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: rgba(255,255,255,0.7); font-weight: 400;
+  transition: color 0.2s;
+  text-shadow: 0 1px 16px rgba(0,0,0,0.22);
+}
+nav a:hover { color: #fff; }
+header.scrolled nav a {
+  color: var(--ink-2);
+  text-shadow: none;
+}
+header.scrolled nav a:hover { color: var(--ink); }
+
+.header-cta { flex-shrink: 0; transform: translateY(-7px); }
+.btn-header {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 400; background: transparent; color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.45); padding: 10px 22px;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+  box-shadow: 0 1px 18px rgba(0,0,0,0.14);
+}
+.btn-header:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); color: #fff; }
+header.scrolled .btn-header {
+  background: transparent; color: var(--ink);
+  border-color: var(--line-2);
+  box-shadow: none;
+}
+header.scrolled .btn-header:hover { background: var(--ink); border-color: var(--ink); color: var(--bg); opacity: 1; }
+
+.hamburger {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; padding: 4px;
+}
+.hamburger span { width: 22px; height: 1px; background: #fff; display: block; transition: background 0.5s; }
+header.scrolled .hamburger span { background: var(--ink); }
+
+body.at-hero header,
+body.at-hero header.scrolled {
+  background: transparent;
+  border-bottom-color: transparent;
+  box-shadow: none;
+}
+body.at-hero header .brand,
+body.at-hero header.scrolled .brand,
+body.at-hero header .brand em,
+body.at-hero header.scrolled .brand em {
+  color: #fff;
+}
+body.at-hero header .brand,
+body.at-hero header.scrolled .brand {
+  text-shadow: 0 1px 18px rgba(0,0,0,0.24);
+}
+body.at-hero header nav a,
+body.at-hero header.scrolled nav a {
+  color: rgba(255,255,255,0.7);
+  text-shadow: 0 1px 16px rgba(0,0,0,0.22);
+}
+body.at-hero header .btn-header,
+body.at-hero header.scrolled .btn-header {
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  border-color: rgba(255,255,255,0.45);
+  box-shadow: 0 1px 18px rgba(0,0,0,0.14);
+}
+body.at-hero header .hamburger span,
+body.at-hero header.scrolled .hamburger span {
+  background: #fff;
+}
+
+/* ─── BUTTONS ─── */
+.btn-primary {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 400; background: var(--ink); color: var(--bg);
+  border: none; padding: 11px 24px; transition: opacity 0.2s; cursor: pointer;
+}
+.btn-primary:hover { opacity: 0.82; }
+
+.hero .btn-primary,
+.hero .btn-ghost {
+  background: transparent;
+  color: #fff;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.58);
+  padding: 0 0 5px;
+  box-shadow: none;
+}
+
+.hero .btn-primary:hover,
+.hero .btn-ghost:hover {
+  background: transparent;
+  border-color: #fff;
+  opacity: 1;
+}
+
+.btn-ghost {
+  font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+  font-weight: 400; background: transparent; color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.4); padding: 11px 24px;
+  transition: border-color 0.2s, background 0.2s; cursor: pointer;
+}
+.btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.08); color: #fff; }
+
+/* ─── MOBILE NAV ─── */
+.mobile-nav {
+  display: none; position: fixed; inset: 0; z-index: 99;
+  background: var(--bg); flex-direction: column;
+  align-items: center; justify-content: center; gap: 28px;
+}
+.mobile-nav.open { display: flex; }
+.nav-toggle { position: fixed; opacity: 0; pointer-events: none; }
+.nav-toggle:checked ~ .mobile-nav { display: flex; }
+.mobile-nav a {
+  font-family: var(--sans); font-size: 2.2rem; font-weight: 200;
+  color: var(--ink); letter-spacing: -0.03em;
+}
+
+/* ─── HERO ─── */
+.hero {
+  position: relative;
+  width: 100%; height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background: #1A1916;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  z-index: 0;
+}
+.hero-bg picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center 48%;
+  display: block;
+  transform: scale(1.06);
+  animation: heroZoom 12s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+.hero-bg-overlay {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.64) 0%, rgba(0,0,0,0.44) 48%, rgba(0,0,0,0.42) 100%),
+    rgba(0,0,0,0.28);
+}
+
+@keyframes heroZoom {
+  from { transform: scale(1.08) translateX(-1.2%); }
+  to   { transform: scale(1.01) translateX(0); }
+}
+
+.hero-content {
+  position: absolute; inset: 0; z-index: 2;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 0 var(--page-x) 52px;
+}
+
+.hero-content-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: end;
+}
+
+.hero-eyebrow {
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.3s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+.hero-eyebrow span::before { content: " · "; }
+
+.hero-h1 {
+  font-family: var(--sans); font-weight: 400;
+  font-size: clamp(5rem, 6.8vw, 7rem);
+  line-height: 0.96; letter-spacing: -0.045em;
+  color: #fff; margin-bottom: 0;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.5s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+.hero-h1 em { font-style: italic; font-weight: 360; color: rgba(255,255,255,0.65); }
+
+.hero-right-col {
+  display: flex; flex-direction: column; justify-content: flex-end;
+  gap: 24px; padding-bottom: 0;
+  opacity: 0;
+  animation: fadeUp 0.9s 0.75s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+.hero-sub {
+  font-size: 13px; line-height: 1.85;
+  color: rgba(255,255,255,0.55);
+  max-width: 380px;
+}
+
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (min-width: 769px) {
+  .hero-btns { transform: translateY(-14px); }
+}
+
+.hero-bottom-bar {
+  display: none;
+}
+.hero-location {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+.hero-scroll {
+  font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ─── SECTION BASE ─── */
+section { padding: 80px 0; }
+
+.sec-grid {
+  display: grid; grid-template-columns: var(--section-label-w) 1fr;
+}
+.sec-label-col {
+  padding: 0 var(--section-label-pad); border-right: 1px solid var(--line);
+  padding-top: 4px;
+}
+.sec-content-col { padding: 0 0 0 var(--section-content-pad); }
+
+/* ─── ABOUT ─── */
+.about { background: var(--bg); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.about .sec-grid { align-items: start; gap: 0; }
+.about .sec-content-col { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; }
+
+.about-text { }
+.about-h2 {
+  font-family: var(--sans); font-weight: 300; font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  line-height: 1.1; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 24px;
+}
+.about-p { font-size: 14px; line-height: 1.9; color: var(--ink-2); }
+.about-p + .about-p { margin-top: 16px; }
+.about-cta { margin-top: 36px; }
+
+.portrait-placeholder {
+  aspect-ratio: 3/4;
+  background: var(--bg-alt);
+  overflow: hidden;
+  position: relative;
+}
+.portrait-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(8%);
+}
+
+.about-stats { display: flex; flex-direction: column; gap: 0; }
+.stat {
+  padding: 20px 0; border-bottom: 1px solid var(--line);
+}
+.portrait-placeholder + .about-stats { margin-top: 22px; }
+.stat:last-child { border-bottom: none; }
+.stat-num {
+  font-family: var(--sans); font-size: 2.4rem; font-weight: 200;
+  line-height: 1; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.03em;
+}
+.stat-label { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+.stat-label-link {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+.stat-label-link:hover { color: var(--ink); }
+
+/* ─── FOCUS BLOCK ─── */
+.focus {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.focus-grid {
+  display: grid;
+  grid-template-columns: var(--section-label-w) 1fr;
+  margin: 0 var(--page-x);
+}
+.focus-label-col {
+  padding: var(--page-x) var(--section-label-pad);
+  border-right: 1px solid var(--line);
+}
+.focus-items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.focus-item {
+  padding: var(--page-x) var(--section-content-pad);
+  border-right: 1px solid var(--line);
+}
+.focus-item:last-child { border-right: none; }
+.focus-item-title {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.focus-item-text {
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink-2);
+  font-weight: 300;
+}
+
+/* ─── SERVICES ─── */
+.services { background: var(--bg); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.services-head { padding-bottom: 56px; }
+.services-title {
+  font-family: var(--sans); font-weight: 300; font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  line-height: 1.1; letter-spacing: -0.03em; color: var(--ink);
+}
+
+.svc-list { border-top: 1px solid var(--line-2); }
+
+.accordion { border-bottom: 1px solid var(--line); }
+.acc-trigger {
+  width: 100%; display: flex; justify-content: space-between; align-items: baseline;
+  padding: 30px 0; background: none; border: none; text-align: left; cursor: pointer;
+}
+.acc-trigger { list-style: none; }
+.acc-trigger::-webkit-details-marker { display: none; }
+.acc-trigger:hover .acc-title { color: var(--ink-2); }
+
+.acc-left { display: flex; gap: 30px; align-items: baseline; }
+.acc-num { font-family: var(--sans); font-size: 10px; color: var(--ink-3); min-width: 28px; letter-spacing: 0.12em; font-weight: 400; }
+.acc-title { font-family: var(--sans); font-size: clamp(1.12rem, 1.55vw, 1.55rem); font-weight: 300; color: var(--ink); transition: color 0.2s; letter-spacing: -0.025em; }
+.acc-right { display: flex; align-items: center; gap: 24px; flex-shrink: 0; }
+.acc-price { font-size: 10px; letter-spacing: 0.13em; color: var(--ink-2); white-space: nowrap; text-transform: uppercase; }
+.acc-icon {
+  width: 18px; height: 18px; border: none; border-radius: 0;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  transition: opacity 0.2s;
+}
+.accordion.open .acc-icon,
+.accordion[open] .acc-icon { background: transparent; border-color: transparent; }
+.acc-icon-line { width: 10px; height: 1px; background: var(--ink-2); transition: background 0.2s; }
+.acc-icon-line.v { transform: rotate(90deg) translateX(0); position: absolute; transition: opacity 0.3s, background 0.2s; }
+.acc-icon-wrap { position: relative; width: 10px; height: 10px; display: flex; align-items: center; justify-content: center; }
+.accordion.open .acc-icon-line,
+.accordion[open] .acc-icon-line { background: var(--ink); }
+.accordion.open .acc-icon-line.v,
+.accordion[open] .acc-icon-line.v { opacity: 0; }
+
+.acc-body { max-height: 0; overflow: hidden; transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1); }
+.accordion.open .acc-body,
+.accordion[open] .acc-body { max-height: 1400px; }
+.acc-inner { padding: 0 0 44px 58px; }
+.acc-desc { font-size: 13px; line-height: 1.9; color: #44443F; margin-bottom: 26px; max-width: 620px; }
+.acc-includes-title { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 14px; }
+.acc-list { list-style: none; margin-bottom: 24px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; row-gap: 0; max-width: 900px; }
+.acc-list li {
+  font-size: 12px; color: #42423E; padding: 10px 0;
+  border-bottom: 1px solid rgba(31,31,29,0.1); padding-right: 20px;
+  line-height: 1.55;
+}
+.acc-timeline { font-size: 12px; color: #5E5E58; margin: 18px 0 28px; }
+.acc-sub {
+  background: transparent; padding: 22px 0 0; margin: 10px 0 30px;
+  border-top: 1px solid var(--line);
+  max-width: 620px;
+}
+.acc-sub-title { font-family: var(--sans); font-size: 1rem; font-weight: 400; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.01em; }
+.acc-sub-price { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 12px; }
+.acc-sub p { font-size: 12px; line-height: 1.75; color: #42423E; }
+.acc-sub p + p { margin-top: 8px; }
+
+.acc-inner > .btn-primary {
+  display: inline-block;
+  background: transparent;
+  color: var(--ink);
+  border: 0;
+  border-bottom: 1px solid var(--line-2);
+  padding: 0 0 4px;
+}
+.acc-inner > .btn-primary:hover {
+  border-color: var(--ink);
+  opacity: 1;
+}
+
+/* ─── PROJECTS ─── */
+/* ─── PROJECTS ─── */
+.projects { background: var(--bg); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.projects-head { padding-bottom: 56px; }
+.projects-title { font-family: var(--sans); font-weight: 300; font-size: clamp(1.8rem, 2.5vw, 2.8rem); letter-spacing: -0.03em; color: var(--ink); margin-bottom: 16px; }
+.projects-intro { max-width: 520px; font-size: 13px; line-height: 1.85; color: var(--ink-2); }
+
+/* Project 01 — full bleed */
+.proj-hero {
+  cursor: pointer;
+  border-top: 1px solid var(--line);
+  padding-bottom: 0;
+}
+.proj-hero-img {
+  width: 100%; aspect-ratio: 21/10;
+  overflow: hidden; position: relative; background: var(--bg-alt);
+}
+.proj-hero-img img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 58%;
+  transition: transform 1s cubic-bezier(0.4,0,0.2,1);
+}
+.proj-hero:hover .proj-hero-img img { transform: scale(1.03); }
+.proj-hero-caption {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+  padding: 24px 0 0;
+  margin-bottom: 0;
+}
+.proj-hero-caption-left { padding-right: 48px; }
+.proj-hero-caption-right {
+  padding-left: 48px; border-left: 1px solid var(--line);
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.proj-hero-num { font-style: italic; font-weight: 300; font-size: 0.78rem; color: var(--ink-3); margin-bottom: 6px; letter-spacing: 0.04em; }
+.proj-hero-title {
+  font-family: var(--sans); font-weight: 200;
+  font-size: clamp(2rem, 3vw, 3.6rem);
+  line-height: 1.03; letter-spacing: -0.04em; color: var(--ink);
+  margin-bottom: 0;
+}
+.proj-hero-meta { font-size: 12px; line-height: 1.8; color: var(--ink-2); max-width: 340px; margin-bottom: 20px; }
+.proj-hero-link {
+  display: inline-block; font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--ink);
+  border-bottom: 1px solid var(--line-2); padding-bottom: 2px;
+  transition: border-color 0.2s; align-self: flex-start;
+}
+.proj-hero:hover .proj-hero-link { border-color: var(--ink); }
+
+/* Projects 02 & 03 — two columns */
+.proj-pair {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--line);
+  margin-top: 0;
+}
+.proj-col {
+  cursor: pointer;
+  display: flex; flex-direction: column;
+  padding: 40px 0;
+}
+.proj-col:first-child { padding-right: 48px; border-right: 1px solid var(--line); }
+.proj-col:last-child { padding-left: 48px; }
+.proj-col-img {
+  aspect-ratio: 4/3; overflow: hidden; position: relative;
+  background: var(--bg-alt); margin-bottom: 22px;
+}
+.proj-col-img img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.proj-col:hover .proj-col-img img { transform: scale(1.04); }
+.proj-col.terracotta-preview .proj-col-img img {
+  width: 100%;
+  max-width: 100%;
+  object-position: 82% center;
+}
+.proj-col-num { font-style: italic; font-weight: 300; font-size: 0.78rem; color: var(--ink-3); margin-bottom: 6px; letter-spacing: 0.04em; }
+.proj-col-title {
+  font-family: var(--sans); font-weight: 200;
+  font-size: clamp(1.2rem, 1.6vw, 1.75rem);
+  line-height: 1.08; letter-spacing: -0.025em; color: var(--ink); margin-bottom: 10px;
+}
+.proj-col-meta { font-size: 10px; color: var(--ink-3); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
+.proj-col-desc { font-size: 12px; line-height: 1.8; color: var(--ink-2); flex: 1; }
+.proj-col-link {
+  display: inline-block; margin-top: 20px; font-size: 10px;
+  letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink);
+  border-bottom: 1px solid var(--line-2); padding-bottom: 2px;
+  transition: border-color 0.2s; align-self: flex-start;
+}
+.proj-col:hover .proj-col-link { border-color: var(--ink); }
+
+.projects-note { margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); }
+
+/* ─── FULL-BLEED STRIP ─── */
+.full-bleed {
+  width: 100%; aspect-ratio: 21/8;
+  overflow: hidden; position: relative; background: var(--bg-alt);
+}
+.full-bleed img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 62%; display: block;
+  transition: transform 1.4s cubic-bezier(0.4,0,0.2,1);
+}
+.full-bleed:hover img { transform: scale(1.02); }
+.full-bleed-caption {
+  position: absolute; bottom: 16px; right: 24px;
+  font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+
+/* ─── PROJECT DETAIL ─── */
+.project-detail {
+  display: none;
+  border-top: 1px solid var(--line);
+  padding-top: 40px;
+}
+.project-detail.active { display: block; }
+.project-detail-head {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 32px; align-items: start;
+  margin-bottom: 36px;
+}
+.project-detail-title {
+  font-family: var(--sans); font-size: clamp(2rem, 3.8vw, 4rem);
+  font-weight: 200; line-height: 1.02; letter-spacing: -0.04em; color: var(--ink);
+  margin: 8px 0 12px;
+}
+.project-detail-text {
+  max-width: 680px;
+  font-size: 13px; line-height: 1.9; color: var(--ink-2);
+}
+.project-detail-text p + p { margin-top: 14px; }
+.project-back {
+  background: transparent; border: none; border-bottom: 1px solid var(--line-2);
+  color: var(--ink); font-size: 10px; letter-spacing: 0.18em;
+  text-transform: uppercase; padding: 0 0 4px;
+}
+.project-gallery {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px; align-items: start;
+}
+.project-gallery figure {
+  margin: 0;
+  background: var(--bg-alt);
+}
+.project-gallery figure.wide { grid-column: 1 / -1; }
+.project-gallery img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  background: var(--bg-alt);
+}
+.project-gallery figcaption {
+  padding: 10px 0 0;
+  font-size: 10px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+
+/* ─── PUBLICATION ─── */
+.publication {
+  background: var(--bg);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.pub-grid { display: grid; grid-template-columns: var(--section-label-w) 1fr; }
+.pub-label-col { padding: 0 var(--section-label-pad); border-right: 1px solid var(--line); padding-top: 4px; }
+.pub-content { padding: 0 0 0 var(--section-content-pad); }
+.pub-content h2 { font-family: var(--sans); font-weight: 300; font-size: clamp(1.8rem, 2.5vw, 2.8rem); letter-spacing: -0.03em; color: var(--ink); margin-bottom: 14px; }
+.pub-content p { font-size: 13px; color: var(--ink-2); line-height: 1.8; max-width: 480px; margin-bottom: 28px; }
+.pub-link {
+  display: inline-block; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--ink); border-bottom: 1px solid var(--line-2); padding-bottom: 2px;
+  transition: border-color 0.2s;
+}
+.pub-link:hover { border-color: var(--ink); }
+
+/* ─── HOW WE WORK ─── */
+.how { background: var(--bg); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.how-head { padding-bottom: 48px; }
+.how-title { font-family: var(--sans); font-weight: 300; font-size: clamp(1.8rem, 2.5vw, 2.8rem); letter-spacing: -0.03em; color: var(--ink); }
+
+.steps-list { border-top: 1px solid var(--line); }
+.step-row {
+  display: grid; grid-template-columns: 52px 1fr 1fr;
+  gap: 0; border-bottom: 1px solid var(--line); padding: 24px 0;
+  align-items: start;
+}
+.step-num { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-3); padding-top: 2px; letter-spacing: 0.06em; }
+.step-title { font-family: var(--sans); font-size: 1rem; font-weight: 300; color: var(--ink); padding-right: 40px; letter-spacing: -0.01em; }
+.step-desc { font-size: 12px; line-height: 1.8; color: var(--ink-2); }
+
+/* ─── CONTACT ─── */
+.contact { background: var(--bg); border-top: 1px solid var(--line); }
+.contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; }
+
+.contact-left {
+  padding: 0 56px 0 0; border-right: 1px solid var(--line);
+  display: flex; flex-direction: column; justify-content: space-between; gap: 40px;
+}
+.contact-h2 { font-family: var(--sans); font-weight: 200; font-size: clamp(2rem, 3vw, 3.4rem); line-height: 1.05; letter-spacing: -0.04em; color: var(--ink); margin-bottom: 16px; }
+.contact-h2 em { font-style: italic; color: #44443F; }
+.contact-sub { font-size: 13px; line-height: 1.85; color: #44443F; margin-bottom: 32px; max-width: 340px; }
+
+.wa-btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--ink); color: var(--bg); border: none;
+  padding: 14px 28px; font-size: 10px; letter-spacing: 0.16em;
+  text-transform: uppercase; font-weight: 400; transition: opacity 0.2s;
+}
+.wa-btn:hover { opacity: 0.82; }
+
+.contact-details { padding-top: 32px; border-top: 1px solid var(--line); }
+.contact-detail { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.contact-detail:last-child { border-bottom: none; }
+.contact-detail span:first-child { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: #5E5E58; }
+.contact-detail a { font-size: 12px; color: #42423E; transition: color 0.2s; }
+.contact-detail a:hover { color: var(--ink); }
+
+.contact-right { padding: 0 0 0 56px; }
+.form { display: flex; flex-direction: column; }
+.fg {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 16px 0; border-bottom: 1px solid var(--line);
+}
+.fg label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #5E5E58; }
+.fg input, .fg select, .fg textarea {
+  background: transparent; border: none; outline: none;
+  font-family: var(--sans); font-size: 13px; font-weight: 300; color: var(--ink);
+  width: 100%; padding: 4px 0;
+}
+.fg input::placeholder,
+.fg textarea::placeholder {
+  color: #6F6F68;
+  opacity: 1;
+}
+.fg select:invalid { color: #6F6F68; }
+.fg textarea { resize: none; height: 96px; }
+.fg select option { background: var(--bg); }
+.form-submit { margin-top: 28px; }
+
+/* ─── STATEMENT BLOCK ─── */
+.statement {
+  padding: 96px 48px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+}
+.statement-quote {
+  font-family: var(--sans);
+  font-weight: 200;
+  font-style: italic;
+  font-size: clamp(2.2rem, 4vw, 5rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin-bottom: 28px;
+  max-width: 900px;
+}
+.statement-body {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-2);
+  font-weight: 300;
+  max-width: 480px;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--bg-dark); color: rgba(247,244,239,0.45);
+  padding: 48px;
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px; align-items: center;
+  border-top: 1px solid #2A2825;
+}
+.footer-brand { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(247,244,239,0.55); margin-bottom: 4px; }
+.footer-tagline { font-size: 11px; color: rgba(247,244,239,0.25); }
+.footer-links { display: flex; gap: 24px; justify-content: center; }
+.footer-links a { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(247,244,239,0.3); transition: color 0.2s; }
+.footer-links a:hover { color: rgba(247,244,239,0.65); }
+.footer-copy { font-size: 11px; text-align: right; color: rgba(247,244,239,0.25); }
+
+/* ─── SECTION PADDING HELPER ─── */
+.pad { padding: 80px var(--page-x); }
+.pad-sm { padding: 64px var(--page-x); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  :root {
+    --page-x: 40px;
+  }
+  .hero { min-height: 100svh; }
+  .hero-content { padding: 0 40px 48px; }
+  .hero-content-inner { grid-template-columns: 1fr; gap: 20px; }
+  .hero-h1 { font-size: clamp(2.6rem, 7vw, 4rem); }
+  .hero-bottom-bar { padding: 14px 40px; }
+  .about .sec-content-col { grid-template-columns: 1fr; gap: 36px; }
+  .about-stats { flex-direction: row; flex-wrap: wrap; gap: 0; }
+  .stat { flex: 1; min-width: 140px; padding: 16px 16px 16px 0; }
+  .proj-hero-caption { grid-template-columns: 1fr; gap: 20px; }
+  .proj-hero-caption-right { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 20px; }
+  .proj-hero-title { font-size: clamp(1.8rem, 4vw, 3rem); }
+  .proj-pair { grid-template-columns: 1fr; }
+  .proj-col:first-child { border-right: none; padding-right: 0; border-bottom: 1px solid var(--line); }
+  .proj-col:last-child { padding-left: 0; }
+  .full-bleed { aspect-ratio: 16/7; }
+  .contact-grid { grid-template-columns: 1fr; gap: 56px; }
+  .contact-left { border-right: none; padding-right: 0; border-bottom: 1px solid var(--line); padding-bottom: 56px; }
+  .contact-right { padding-left: 0; }
+  footer { grid-template-columns: 1fr; text-align: center; }
+  .footer-copy { text-align: center; }
+  .footer-links { justify-content: center; }
+  .pad { padding: 64px 40px; }
+  .focus-grid { grid-template-columns: 1fr; }
+  .focus-grid { margin: 0; }
+  .focus-label-col { border-right: none; border-bottom: 1px solid var(--line); padding: 32px 40px; }
+  .focus-items { grid-template-columns: 1fr; }
+  .focus-item { border-right: none; border-bottom: 1px solid var(--line); padding: 32px 40px; }
+  .focus-item:last-child { border-bottom: none; }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --mobile-gutter: 24px;
+    --hero-mobile-bleed: 0px;
+  }
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  html { background: #1A1916 !important; }
+  body { background: var(--bg) !important; }
+  body.at-hero {
+    background-color: #1A1916 !important;
+    background-image: none !important;
+  }
+  header {
+    position: absolute;
+    top: 0;
+    height: 0;
+    padding: 0 var(--mobile-gutter);
+    background: transparent !important;
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  header.scrolled {
+    background: transparent !important;
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+  }
+  header .brand {
+    position: absolute;
+    top: 24px;
+    left: var(--mobile-gutter);
+  }
+  body.past-hero header {
+    background: transparent !important;
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+  }
+  .hero {
+    margin-top: 0;
+    height: 100svh;
+    height: 100dvh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    overflow: hidden;
+    background: #1A1916;
+  }
+  .hero-bg {
+    top: -2px;
+    bottom: -2px;
+  }
+  .hero-bg img {
+    height: 100%;
+    object-position: center center;
+    transform: none;
+    animation: none;
+  }
+  header .brand,
+  header.scrolled .brand,
+  header .brand em,
+  header.scrolled .brand em {
+    color: #fff !important;
+  }
+  body.past-hero header .brand { color: var(--ink) !important; text-shadow: none !important; }
+  body.past-hero header .brand em { color: var(--ink-3) !important; text-shadow: none !important; }
+  header .brand,
+  header.scrolled .brand {
+    text-shadow: 0 1px 18px rgba(0,0,0,0.24) !important;
+  }
+  header .hamburger span,
+  header.scrolled .hamburger span {
+    background: #fff !important;
+  }
+  body.past-hero header .hamburger span { background: #fff !important; }
+  nav { display: none; }
+  .header-cta { display: none; }
+  .hamburger {
+    display: flex;
+    position: fixed !important;
+    top: 24px !important;
+    right: var(--mobile-gutter) !important;
+    z-index: 1000;
+    mix-blend-mode: difference;
+    padding: 0;
+    gap: 6px;
+    align-items: flex-start;
+    line-height: 0;
+  }
+  .hamburger span {
+    width: 24px;
+    height: 2px;
+  }
+  .hero-content {
+    display: block;
+    padding: 0;
+    position: absolute;
+    inset: 0;
+  }
+  .hero-content-inner {
+    display: block;
+    position: static;
+  }
+  .hero-eyebrow {
+    position: absolute;
+    top: calc(29svh - 74px);
+    left: auto;
+    right: var(--mobile-gutter);
+    margin: 0;
+    max-width: none;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .hero-h1 {
+    position: absolute;
+    top: auto;
+    bottom: clamp(214px, 32svh, 282px);
+    left: var(--mobile-gutter);
+    right: var(--mobile-gutter);
+    font-size: clamp(2.42rem, 10.8vw, 2.88rem);
+    font-weight: 440;
+    line-height: 1.1;
+    letter-spacing: 0.005em;
+  }
+  .hero-h1 em { font-weight: 380; }
+  .hero-right-col {
+    position: absolute;
+    top: auto;
+    bottom: clamp(24px, 4svh, 42px);
+    left: var(--mobile-gutter);
+    right: var(--mobile-gutter);
+    gap: 22px;
+    padding-bottom: 0;
+  }
+  .hero-sub {
+    font-size: 0.88rem;
+    line-height: 1.72;
+  }
+  .hero-btns {
+    gap: 15px;
+  }
+  .hero-bottom-bar { padding: 12px var(--mobile-gutter); }
+  .hero-btns { flex-direction: column; align-items: flex-start; }
+  .hero-btns button,
+  .hero-btns a {
+    width: auto;
+    text-align: left;
+    align-self: flex-start;
+  }
+  .form-submit { text-align: left; }
+  .sec-grid { grid-template-columns: 1fr; }
+  .sec-label-col { border-right: none; border-bottom: 1px solid var(--line); padding: 0 0 20px; }
+  .sec-content-col { padding: 28px 0 0; }
+  .pub-grid { grid-template-columns: 1fr; }
+  .pub-label-col { border-right: none; border-bottom: 1px solid var(--line); padding: 0 0 20px; }
+  .pub-content { padding: 28px 0 0; }
+  .acc-trigger { align-items: flex-start; gap: 18px; padding: 26px 0; }
+  .acc-left { gap: 18px; align-items: flex-start; flex: 1; }
+  .acc-right { gap: 14px; padding-top: 3px; }
+  .acc-price {
+    display: block;
+    position: absolute;
+    left: 46px;
+    top: 54px;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: #5E5E58;
+  }
+  .accordion { position: relative; }
+  .accordion .acc-trigger { padding-bottom: 48px; }
+  .acc-list { grid-template-columns: 1fr; }
+  .step-row { grid-template-columns: 36px 1fr; }
+  .step-desc { display: none; }
+  .project-detail-head { grid-template-columns: 1fr; }
+  .project-gallery { grid-template-columns: 1fr; }
+  .pad { padding: 56px var(--mobile-gutter); }
+  footer { padding: 40px var(--mobile-gutter); }
+  .acc-inner { padding-left: 46px; padding-bottom: 38px; }
+  .statement { padding: 58px 24px 48px; }
+  .statement-quote { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+  .focus-grid { margin: 0; }
+  .focus-label-col { padding: 0 var(--mobile-gutter) 20px; }
+  .focus-item { padding: 32px var(--mobile-gutter); }
+  .about-stats {
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  .stat {
+    display: block;
+    min-width: 0;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .stat:last-child { border-bottom: none; }
+  .stat-num {
+    font-size: 1.35rem !important;
+    line-height: 1.25 !important;
+    padding-top: 0 !important;
+    margin-bottom: 7px;
+  }
+  .stat-label { color: #5E5E58; }
+  .full-bleed {
+    aspect-ratio: 4/5;
+    margin-top: 0;
+  }
+  .full-bleed img {
+    object-position: center;
+    transform: none;
+  }
+  .full-bleed:hover img { transform: none; }
+  .proj-col.braga-preview .proj-col-img img {
+    object-position: 52% 40%;
+    transform: scale(1.02);
+  }
+  .proj-hero-img { aspect-ratio: 4/3; }
+  .proj-hero-caption { padding: 20px 0 0; }
+  .proj-hero-title { font-size: 1.8rem; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-scroll { display: none; }
+}
+
+/* ─── FADE IN ─── */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s, transform 0.7s; }
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (max-width: 768px) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+</style>
+</head>
+<body class="at-hero">
+
+<!-- HEADER -->
+<input class="nav-toggle" type="checkbox" id="navToggle" aria-hidden="true">
+<header id="header">
+  <a href="#" class="brand">Alina Savankova <em>Interior Designer</em></a>
+  <nav>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#publication">Publication</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="https://wa.me/79996696508" class="btn-header header-cta" target="_blank" rel="noopener">Discuss project</a>
+</header>
+<label class="hamburger" id="hamburger" for="navToggle" aria-label="Open menu" role="button" tabindex="0">
+  <span></span><span></span><span></span>
+</label>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#services" onclick="closeMobileNav()">Services</a>
+  <a href="#projects" onclick="closeMobileNav()">Projects</a>
+  <a href="#publication" onclick="closeMobileNav()">Publication</a>
+  <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  <a href="https://wa.me/79996696508" target="_blank" rel="noopener" onclick="closeMobileNav()">WhatsApp ↗</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home" aria-label="Introduction">
+  <div class="hero-bg">
+    <picture>
+      <source media="(max-width: 768px)" srcset="public/images/hero-mobile-kitchen-crop.jpg">
+      <img
+        src="public/images/hero-collected-kitchen.jpg"
+        alt="Collected kitchen interior with dark wood, mustard walls and sculptural lighting"
+        loading="eager"
+        onerror="this.style.opacity='0'"
+      />
+    </picture>
+    <div class="hero-bg-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-content-inner">
+      <div>
+        <p class="label hero-eyebrow">Interior Design<span>Portugal</span></p>
+        <h1 class="hero-h1">Interiors<br><em>shaped by</em><br>architecture</h1>
+      </div>
+      <div class="hero-right-col">
+        <p class="hero-sub">Residential interiors for apartments and houses across Portugal — from layout planning and concept to furnishing, materials and implementation support.</p>
+        <div class="hero-btns">
+          <a href="https://wa.me/79996696508" class="btn-primary" target="_blank" rel="noopener">Discuss your project</a>
+          <a href="#projects" class="btn-ghost">View projects</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-bottom-bar">
+    <span class="hero-location">Porto · Lisbon · Braga · Portugal</span>
+    <span class="hero-scroll">Scroll to explore</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about pad" id="about" aria-label="About Alina Savankova">
+  <div class="sec-grid reveal">
+    <div class="sec-label-col">
+      <p class="label">About</p>
+    </div>
+    <div class="sec-content-col">
+      <div class="about-text">
+        <h2 class="about-h2">Homes where planning, light, materials and personal habits matter equally</h2>
+        <p class="about-p">I am Alina Savankova, an architect and interior designer based in Porto with over 8 years of experience. I work with apartments and houses across Portugal, creating spaces that feel calm, personal and carefully considered.</p>
+        <p class="about-p">My approach is quiet and practical: I look for thoughtful layouts, balanced materials, comfortable proportions and details that support everyday life without making the interior feel overdesigned.</p>
+        <div class="about-cta">
+          <a href="https://wa.me/79996696508" class="btn-primary" target="_blank" rel="noopener">Discuss your project</a>
+        </div>
+      </div>
+      <div>
+        <div class="portrait-placeholder">
+          <img src="public/images/portrait/alina-portrait-editorial.jpg" alt="Alina Savankova — interior designer and architect based in Porto, Portugal" loading="lazy">
+        </div>
+        <div class="about-stats">
+        <div class="stat">
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Years of experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" style="font-size:1.05rem; padding-top:0.35rem; line-height:1.5;">Porto · Lisbon · Braga</div>
+          <div class="stat-label">Cities</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num" style="font-size:1rem; padding-top:0.4rem; line-height:1.6;">Featured in<br>Redesign</div>
+          <a class="stat-label stat-label-link" href="https://redesign-home.ru/istoriya-kamernogo-no-mnogogrannogo-interera-v-odnom-lissabonskom-penthause/" target="_blank" rel="noopener">Publication</a>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MY FOCUS -->
+<div class="focus" aria-label="My focus">
+  <div class="focus-grid reveal">
+    <div class="focus-label-col">
+      <p class="label">My focus</p>
+    </div>
+    <div class="focus-items">
+      <div class="focus-item">
+        <div class="focus-item-title">Architecture</div>
+        <p class="focus-item-text">Thoughtful layouts, proportions and clear functional logic.</p>
+      </div>
+      <div class="focus-item">
+        <div class="focus-item-title">Atmosphere</div>
+        <p class="focus-item-text">Light, materials, colour, art and vintage pieces that give the interior character.</p>
+      </div>
+      <div class="focus-item">
+        <div class="focus-item-title">Everyday life</div>
+        <p class="focus-item-text">Spaces that support the way you rest, work, host, move and feel at home.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<section class="projects pad" id="projects" aria-label="Selected projects">
+  <div class="sec-grid">
+    <div class="sec-label-col">
+      <p class="label">Selected projects</p>
+    </div>
+    <div class="sec-content-col">
+      <div class="projects-head reveal">
+        <h2 class="projects-title">Selected residential projects</h2>
+        <p class="projects-intro">A focused selection of interior design, furnishing and styling projects across Portugal. The full portfolio is available on request.</p>
+      </div>
+
+      <!-- Project 01 — full bleed -->
+      <div class="proj-hero reveal" onclick="openProject(0)" role="button" tabindex="0" aria-label="View project: Shades of Grey in Historic Lisbon" onkeydown="if(event.key==='Enter')openProject(0)">
+        <div class="proj-hero-img">
+          <img src="public/images/shades-of-grey/01-cover-living-room-chair.jpg"
+            alt="Shades of Grey — historic Lisbon apartment, grey palette and architectural mouldings"
+            loading="lazy" onerror="this.style.opacity='0'" />
+        </div>
+        <div class="proj-hero-caption">
+          <div class="proj-hero-caption-left">
+            <p class="proj-hero-num">01</p>
+            <h3 class="proj-hero-title">Shades of Grey<br>in Historic Lisbon</h3>
+          </div>
+          <div class="proj-hero-caption-right">
+            <p class="proj-hero-meta">Historic apartment renovation · Lisbon, Portugal<br><br>A historic apartment designed around grey and muted green tones — built on natural light, old wooden floors, architectural mouldings and carefully selected textures.</p>
+            <span class="proj-hero-link">View project</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects 02 & 03 — two columns -->
+      <div class="proj-pair">
+        <div class="proj-col terracotta-preview reveal" onclick="openProject(1)" role="button" tabindex="0" aria-label="View project: Terracotta Soul" onkeydown="if(event.key==='Enter')openProject(1)">
+          <div class="proj-col-img">
+            <img src="public/images/terracotta-soul/01-cover-open-space.jpg"
+              alt="Terracotta Soul — warm Lisbon apartment with terracotta tones and natural textures"
+              loading="lazy" onerror="this.style.opacity='0'" />
+          </div>
+          <p class="proj-col-num">02</p>
+          <h3 class="proj-col-title">Terracotta Soul</h3>
+          <p class="proj-col-meta">Residential interior · Lisbon</p>
+          <p class="proj-col-desc">Terracotta and burgundy tones, natural textures, microcement and sculptural objects — mid-century modern meets soft eclecticism.</p>
+          <span class="proj-col-link">View project</span>
+        </div>
+        <div class="proj-col braga-preview reveal" onclick="openProject(2)" role="button" tabindex="0" aria-label="View project: Braga Airbnb Heritage" onkeydown="if(event.key==='Enter')openProject(2)">
+          <div class="proj-col-img">
+            <img src="public/images/braga-airbnb-heritage/01-cover-living-room-mirror.jpg"
+              alt="Braga Airbnb Heritage — styled rental apartment in historic Braga"
+              loading="lazy" onerror="this.style.opacity='0'" />
+          </div>
+          <p class="proj-col-num">03</p>
+          <h3 class="proj-col-title">Braga Airbnb Heritage</h3>
+          <p class="proj-col-meta">Furnishing &amp; styling · Braga</p>
+          <p class="proj-col-desc">A memorable Portuguese home built through furniture, lighting, textiles, art and vintage pieces — designed to photograph well and feel deeply personal.</p>
+          <span class="proj-col-link">View project</span>
+        </div>
+      </div>
+
+      <p class="projects-note">More projects available on request</p>
+      <div class="project-detail" id="projectDetail" aria-live="polite">
+        <div class="project-detail-head">
+          <div>
+            <p class="label" id="projectDetailMeta"></p>
+            <h3 class="project-detail-title" id="projectDetailTitle"></h3>
+            <div class="project-detail-text" id="projectDetailText"></div>
+          </div>
+          <button class="project-back" type="button" onclick="closeProject()">Back to projects</button>
+        </div>
+        <div class="project-gallery" id="projectGallery"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- STATEMENT -->
+<div class="statement" aria-label="Design philosophy">
+  <div class="reveal">
+    <p class="statement-quote">"Collected, not decorated."</p>
+    <p class="statement-body">I create interiors that feel assembled over time — through architecture, light, materials, art, vintage pieces and the way people actually live.</p>
+  </div>
+</div>
+
+<!-- FULL-BLEED -->
+<div class="full-bleed" aria-hidden="true">
+  <picture>
+    <source media="(max-width: 768px)" srcset="public/images/alcochette-collected-living-mobile-crop.jpg">
+    <img src="public/images/alcochette-collected-living.jpg"
+      alt="Collected living and dining interior with burgundy wall, bookshelves and sculptural object"
+      loading="lazy" onerror="this.style.opacity='0'" />
+  </picture>
+</div>
+
+<!-- SERVICES -->
+<section class="services pad" id="services" aria-label="Services">
+  <div class="sec-grid">
+    <div class="sec-label-col">
+      <p class="label">Services</p>
+    </div>
+    <div class="sec-content-col">
+      <div class="services-head reveal">
+        <h2 class="services-title">Formats of work</h2>
+        <p class="about-p" style="max-width:560px; margin-top:16px;">Choose a complete project, a planning stage, furnishing support or a focused consultation depending on where you are in the renovation process.</p>
+      </div>
+
+      <div class="svc-list">
+
+        <!-- Service 1 -->
+        <details class="accordion" id="acc1" open>
+          <summary class="acc-trigger" aria-expanded="true">
+            <div class="acc-left">
+              <span class="acc-num">01</span>
+              <span class="acc-title">Full Interior Design Project</span>
+            </div>
+            <div class="acc-right">
+              <span class="acc-price">from €50 / m²</span>
+              <div class="acc-icon" aria-hidden="true">
+                <div class="acc-icon-wrap">
+                  <div class="acc-icon-line"></div>
+                  <div class="acc-icon-line v"></div>
+                </div>
+              </div>
+            </div>
+          </summary>
+          <div class="acc-body" id="acc1-body">
+            <div class="acc-inner">
+              <p class="acc-desc">For clients who want a complete design route from planning and atmosphere to documentation, specifications and implementation support.</p>
+              <p class="acc-includes-title">Includes</p>
+              <ul class="acc-list">
+                <li>Measured floor plan</li>
+                <li>2–3 furniture layout options</li>
+                <li>Final approved layout</li>
+                <li>Interior concept and visual direction</li>
+                <li>3D visualisations</li>
+                <li>Construction documentation package</li>
+                <li>Drawings for furniture manufacturers</li>
+                <li>Furniture, lighting and material specs</li>
+                <li>Preliminary estimate</li>
+                <li>List of all items used in the project</li>
+              </ul>
+              <p class="acc-timeline">Timeline: from 45 business days</p>
+              <div class="acc-sub">
+                <div class="acc-sub-title">Author's Supervision</div>
+                <div class="acc-sub-price">from €400 / month</div>
+                <p>Support during implementation to keep the renovation aligned with the approved design concept, drawings and specifications.</p>
+                <p style="margin-top:8px; font-size:11px; color:var(--ink-3);">Online: €400 / month · On-site in Porto, Braga and Lisbon: €600 / month</p>
+              </div>
+              <a href="https://wa.me/79996696508" class="btn-primary" target="_blank" rel="noopener">Discuss this service</a>
+            </div>
+          </div>
+        </details>
+
+        <!-- Service 2 -->
+        <details class="accordion" id="acc2">
+          <summary class="acc-trigger" aria-expanded="false">
+            <div class="acc-left">
+              <span class="acc-num">02</span>
+              <span class="acc-title">Layout Planning</span>
+            </div>
+            <div class="acc-right">
+              <span class="acc-price">from €10 / m²</span>
+              <div class="acc-icon" aria-hidden="true">
+                <div class="acc-icon-wrap">
+                  <div class="acc-icon-line"></div>
+                  <div class="acc-icon-line v"></div>
+                </div>
+              </div>
+            </div>
+          </summary>
+          <div class="acc-body" id="acc2-body">
+            <div class="acc-inner">
+              <p class="acc-desc">For clients who need to understand the best possible use of their space before starting renovation, furnishing or a full design project.</p>
+              <p class="acc-includes-title">Includes</p>
+              <ul class="acc-list">
+                <li>Analysis of the existing floor plan</li>
+                <li>Minimum two optimal layout options</li>
+                <li>Zoning and functional logic</li>
+                <li>Furniture and equipment arrangement</li>
+                <li>Recommendations for circulation and storage</li>
+                <li>Final layout proposal in PDF format</li>
+              </ul>
+              <p class="acc-timeline">50–100 m²: around 14 business days · Over 150 m²: 14–21 business days</p>
+              <a href="https://wa.me/79996696508" class="btn-primary" target="_blank" rel="noopener">Discuss this service</a>
+            </div>
+          </div>
+        </details>
+
+        <!-- Service 3 -->
+        <details class="accordion" id="acc3">
+          <summary class="acc-trigger" aria-expanded="false">
+            <div class="acc-left">
+              <span class="acc-num">03</span>
+              <span class="acc-title">Furnishing &amp; Styling</span>
+            </div>
+            <div class="acc-right">
+              <span class="acc-price">from €300 / room</span>
+              <div class="acc-icon" aria-hidden="true">
+                <div class="acc-icon-wrap">
+                  <div class="acc-icon-line"></div>
+                  <div class="acc-icon-line v"></div>
+                </div>
+              </div>
+            </div>
+          </summary>
+          <div class="acc-body" id="acc3-body">
+            <div class="acc-inner">
+              <p class="acc-desc">For clients with a finished or semi-finished space who need furniture, lighting, textiles and decor selected with taste, logic and character.</p>
+              <p class="acc-includes-title">Includes</p>
+              <ul class="acc-list">
+                <li>Analysis of the space, goals and budget</li>
+                <li>Furniture layout and zoning</li>
+                <li>Colour and material direction</li>
+                <li>Furniture, lighting and decor selection</li>
+                <li>Visual collage using real items</li>
+                <li>Final PDF with items and purchase links</li>
+              </ul>
+              <p class="acc-timeline">Additional site visit / support: from €100 per visit</p>
+              <a href="https://wa.me/79996696508" class="btn-primary" target="_blank" rel="noopener">Discuss this service</a>
+            </div>
+          </div>
+        </details>
+
+        <!-- Service 4 -->
+        <details class="accordion" id="acc4">
+          <summary class="acc-trigger" aria-expanded="false">
+            <div class="acc-left">
+              <span class="acc-num">04</span>
+              <span class="acc-title">Online Interior Consultation</span>
+            </div>
+            <div class="acc-right">
+              <span class="acc-price">€150 / 2 hours</span>
+              <div class="acc-icon" aria-hidden="true">
+                <div class="acc-icon-wrap">
+                  <div class="acc-icon-line"></div>
+                  <div class="acc-icon-line v"></div>
+                </div>
+              </div>
+            </div>
+          </summary>
+          <div class="acc-body" id="acc4-body">
+            <div class="acc-inner">
+              <p class="acc-desc">For one specific interior question: layout, concept, colour palette, furniture arrangement, renovation direction or overall atmosphere.</p>
+              <p class="acc-includes-title">We can discuss</p>
+              <ul class="acc-list">
+                <li>Layout and zoning options</li>
+                <li>Furniture arrangement</li>
+                <li>Colour palette, materials and textures</li>
+                <li>Lighting, textiles and decor direction</li>
+                <li>Renovation questions</li>
+                <li>How to create a coherent interior concept</li>
+              </ul>
+              <p class="acc-desc" style="margin-top:0; margin-bottom:20px;">Before the consultation you send materials in advance: photos, floor plan, measurements, references and questions. After the session you receive a clear design direction and practical recommendations.</p>
+              <a href="https://wa.me/79996696508" class="btn-primary" target="_blank" rel="noopener">Discuss this service</a>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATION -->
+<section class="publication pad" id="publication" aria-label="Publication">
+  <div class="pub-grid reveal">
+    <div class="pub-label-col">
+      <p class="label">Publication</p>
+    </div>
+    <div class="pub-content">
+      <h2>Featured in Redesign</h2>
+      <p>One of the projects was featured in Redesign — a publication covering thoughtful contemporary residential interiors.</p>
+      <a href="https://redesign-home.ru/istoriya-kamernogo-no-mnogogrannogo-interera-v-odnom-lissabonskom-penthause/" class="pub-link">Read the article ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW WE WORK -->
+<section class="how pad" id="how" aria-label="How we work">
+  <div class="sec-grid">
+    <div class="sec-label-col">
+      <p class="label">Process</p>
+    </div>
+    <div class="sec-content-col">
+      <div class="how-head reveal">
+        <h2 class="how-title">How we work</h2>
+      </div>
+      <div class="steps-list">
+        <div class="step-row">
+          <span class="step-num">01</span>
+          <span class="step-title">Discovery call</span>
+          <p class="step-desc">We discuss your property, lifestyle, goals, timing and the type of support you need.</p>
+        </div>
+        <div class="step-row">
+          <span class="step-num">02</span>
+          <span class="step-title">Brief &amp; project diagnosis</span>
+          <p class="step-desc">I analyse the space, your needs, references, budget logic and possible design direction.</p>
+        </div>
+        <div class="step-row">
+          <span class="step-num">03</span>
+          <span class="step-title">Layout and concept</span>
+          <p class="step-desc">We define the planning solution, zoning, atmosphere, colour direction and key interior decisions.</p>
+        </div>
+        <div class="step-row">
+          <span class="step-num">04</span>
+          <span class="step-title">Design development</span>
+          <p class="step-desc">The concept is developed into visual materials, specifications and technical documentation.</p>
+        </div>
+        <div class="step-row" style="border-bottom: none;">
+          <span class="step-num">05</span>
+          <span class="step-title">Sourcing &amp; implementation support</span>
+          <p class="step-desc">If needed, I help with furniture, materials, suppliers and author's supervision during the implementation stage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact pad" id="contact" aria-label="Contact">
+  <div class="sec-grid" style="margin-bottom: 56px;">
+    <div class="sec-label-col">
+      <p class="label">Contact</p>
+    </div>
+    <div class="sec-content-col">
+      <h2 class="contact-h2 reveal">Send a short<br><em>project brief</em></h2>
+    </div>
+  </div>
+  <div class="sec-grid">
+    <div class="sec-label-col"></div>
+    <div class="sec-content-col">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <div>
+            <p class="contact-sub">Tell me where the property is, what stage you are at and what kind of support you need. I will suggest the most suitable format of work.</p>
+            <a href="https://wa.me/79996696508" class="wa-btn" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Discuss your project on WhatsApp
+            </a>
+          </div>
+          <div class="contact-details">
+            <div class="contact-detail">
+              <span>WhatsApp</span>
+              <a href="https://wa.me/79996696508">+7 999 669 65 08</a>
+            </div>
+            <div class="contact-detail">
+              <span>Instagram</span>
+              <a href="https://www.instagram.com/avdesign_interior/" target="_blank" rel="noopener">@avdesign_interior</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <form class="form" onsubmit="handleForm(event)" novalidate>
+            <div class="fg">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name"/>
+            </div>
+            <div class="fg">
+              <label for="location">Location</label>
+              <input type="text" id="location" name="location" placeholder="Porto, Lisbon, Braga…"/>
+            </div>
+            <div class="fg">
+              <label for="property">Property / service</label>
+              <select id="property" name="property">
+                <option value="" disabled selected>Select</option>
+                <option>Apartment · full project</option>
+                <option>House / villa · full project</option>
+                <option>Layout planning</option>
+                <option>Furnishing & styling</option>
+                <option>Online consultation</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="area">Approximate area</label>
+              <input type="text" id="area" name="area" placeholder="e.g. 90 m²"/>
+            </div>
+            <div class="fg">
+              <label for="message">Project stage and what you need</label>
+              <textarea id="message" name="message" placeholder="Tell me a little about your project or question…"></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn-primary" style="padding: 14px 32px;">Send brief on WhatsApp</button>
+              <p id="form-notice" style="display:none; margin-top:12px; font-size:12px; color:#5E5E58;">Thank you. For the fastest reply, reach me directly on WhatsApp.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">Alina Savankova Interior Design</div>
+    <div class="footer-tagline">Interior design services in Porto, Lisbon, Braga and across Portugal</div>
+  </div>
+  <div class="footer-links">
+    <a href="https://wa.me/79996696508" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://www.instagram.com/avdesign_interior/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <div class="footer-copy">© <span id="year"></span> Alina Savankova</div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Header — transparent at the top, solid halfway through the desktop hero.
+  const header = document.getElementById('header');
+  const hero = document.getElementById('home');
+  function updateHeader() {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    const heroHeight = hero.offsetHeight || window.innerHeight;
+    const desktopSolid = window.scrollY >= heroHeight * 0.5;
+    const mobilePastHero = window.scrollY > 32 && heroBottom <= header.offsetHeight + 1;
+    const isPastHero = isMobile ? mobilePastHero : desktopSolid;
+    document.body.classList.toggle('at-hero', !isPastHero);
+    document.body.classList.toggle('past-hero', isPastHero);
+    if (isPastHero) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  window.addEventListener('resize', updateHeader, { passive: true });
+  requestAnimationFrame(updateHeader);
+
+  // Hamburger
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  const navToggle = document.getElementById('navToggle');
+  function syncMobileNav() {
+    if (!mobileNav || !navToggle) return;
+    mobileNav.classList.toggle('open', navToggle.checked);
+  }
+  if (hamburger && navToggle) {
+    hamburger.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        navToggle.checked = !navToggle.checked;
+        syncMobileNav();
+      }
+    });
+    navToggle.addEventListener('change', syncMobileNav);
+  }
+  function closeMobileNav() {
+    if (navToggle) navToggle.checked = false;
+    if (mobileNav) mobileNav.classList.remove('open');
+  }
+  window.closeMobileNav = closeMobileNav;
+
+  document.querySelectorAll('.accordion').forEach(accordion => {
+    const trigger = accordion.querySelector('.acc-trigger');
+    if (!trigger) return;
+    if (accordion.tagName.toLowerCase() === 'details') {
+      accordion.addEventListener('toggle', () => {
+        if (accordion.open) {
+          document.querySelectorAll('details.accordion[open]').forEach(other => {
+            if (other !== accordion) other.open = false;
+          });
+        }
+        trigger.setAttribute('aria-expanded', accordion.open ? 'true' : 'false');
+      });
+    } else {
+      trigger.addEventListener('click', () => toggleAcc(accordion.id));
+    }
+  });
+
+  // Accordion
+  function toggleAcc(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.tagName.toLowerCase() === 'details') {
+      el.open = !el.open;
+      return;
+    }
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.accordion.open').forEach(a => {
+      a.classList.remove('open');
+      a.querySelector('.acc-trigger').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      el.classList.add('open');
+      el.querySelector('.acc-trigger').setAttribute('aria-expanded', 'true');
+    }
+  }
+  window.toggleAcc = toggleAcc;
+
+  // Project detail
+  const projects = [
+    {
+      title: 'Shades of Grey in Historic Lisbon',
+      meta: 'Historic apartment renovation · Lisbon, Portugal',
+      text: [
+        'A historic Lisbon apartment designed around a complex palette of grey and muted green tones. The interior is built on subtle contrasts: natural light, old wooden floors, architectural mouldings, black accents and carefully selected textures.',
+        'The main idea was to preserve the noble character of the space while creating a calm, coherent and deeply atmospheric home. In the bedroom, the layout was subtly adjusted to integrate built-in wardrobes around the bed, keeping the architecture clean and visually balanced.'
+      ],
+      images: [
+        ['public/images/shades-of-grey/01-cover-living-room-chair.jpg', 'Living room with statement chair — Shades of Grey, Lisbon'],
+        ['public/images/shades-of-grey/02-bedroom-to-study.jpg', 'View from bedroom to study'],
+        ['public/images/shades-of-grey/03-study-to-bedroom.jpg', 'View from study to bedroom'],
+        ['public/images/shades-of-grey/04-study-photo.jpg', 'Study with built-in bookshelves and desk'],
+        ['public/images/shades-of-grey/04-kitchen.jpg', 'Kitchen with muted palette', true],
+        ['public/images/shades-of-grey/06-bathroom-render.jpg', 'Bathroom with grey stone and black fixtures'],
+        ['public/images/shades-of-grey/05-bathroom-accent-tile.jpg', 'Bathroom with accent tile']
+      ]
+    },
+    {
+      title: 'Terracotta Soul',
+      meta: 'Residential interior · Lisbon, Portugal',
+      text: [
+        'A warm and flexible Lisbon interior designed for different rhythms of life: quiet evenings, gatherings with friends, music, work and everyday rituals.',
+        'The project started from a white-box apartment, where key architectural adjustments transformed the feeling of the space. Terracotta and burgundy tones, natural textures, microcement and sculptural objects create a layered atmosphere where mid-century modern meets soft eclecticism.'
+      ],
+      images: [
+        ['public/images/terracotta-soul/01-cover-open-space.jpg', 'Open-plan living area — Terracotta Soul, Lisbon', true],
+        ['public/images/terracotta-soul/02-dining-pendant.jpg', 'Dining area with pendant light'],
+        ['public/images/terracotta-soul/03-wooden-partition.jpg', 'Wooden partition detail'],
+        ['public/images/terracotta-soul/04-living-room-dog-fireplace.jpg', 'Living room with fireplace'],
+        ['public/images/terracotta-soul/05-sculptural-detail.jpg', 'Sculptural object detail']
+      ]
+    },
+    {
+      title: 'Braga Airbnb Heritage',
+      meta: 'Furnishing & styling for rental apartment · Braga, Portugal',
+      text: [
+        'A furnishing and styling project for an apartment in the historic centre of Braga, prepared for short-term rental. The starting point was a finished white-box space that needed warmth, character and a stronger visual identity.',
+        'The interior was built through furniture, lighting, textiles, art and vintage pieces. The goal was to create a memorable Portuguese home with atmosphere: a space that photographs well, feels personal and increases the perceived value of the property.'
+      ],
+      images: [
+        ['public/images/braga-airbnb-heritage/01-cover-living-room-mirror.jpg', 'Living room with mirror — Braga Airbnb Heritage'],
+        ['public/images/braga-airbnb-heritage/02-living-room-sofa.jpg', 'Sofa and living space'],
+        ['public/images/braga-airbnb-heritage/03-bedroom-artwork.jpg', 'Bedroom with artwork'],
+        ['public/images/braga-airbnb-heritage/04-bedroom-wardrobe-vanity.jpg', 'Bedroom with wardrobe and vanity'],
+        ['public/images/braga-airbnb-heritage/05-bedroom-window-vintage-chair.jpg', 'Vintage chair by window']
+      ]
+    }
+  ];
+
+  function openProject(index) {
+    const project = projects[index];
+    const detail = document.getElementById('projectDetail');
+    document.getElementById('projectDetailMeta').textContent = project.meta;
+    document.getElementById('projectDetailTitle').textContent = project.title;
+    document.getElementById('projectDetailText').innerHTML = project.text.map(paragraph => `<p>${paragraph}</p>`).join('');
+    document.getElementById('projectGallery').innerHTML = project.images.map(([src, alt, isWide], imageIndex) => {
+      const wide = isWide ? ' class="wide"' : '';
+      return `<figure${wide}><img src="${src}" alt="${alt}" loading="lazy"><figcaption>${String(imageIndex + 1).padStart(2, '0')}</figcaption></figure>`;
+    }).join('');
+    detail.classList.add('active');
+    detail.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function closeProject() {
+    const detail = document.getElementById('projectDetail');
+    detail.classList.remove('active');
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+    // Form
+  function handleForm(e) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const message = [
+      'Hello Alina, I would like to discuss an interior design project.',
+      data.get('name') && `Name: ${data.get('name')}`,
+      data.get('location') && `Location: ${data.get('location')}`,
+      data.get('property') && `Property / service: ${data.get('property')}`,
+      data.get('area') && `Approximate area: ${data.get('area')}`,
+      data.get('message') && `Request: ${data.get('message')}`
+    ].filter(Boolean).join('\n');
+    window.open(`https://wa.me/79996696508?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    const notice = document.getElementById('form-notice');
+    if (notice) notice.style.display = 'block';
+  }
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('visible'));
+  }
+</script>
+
+</body>
+</html>
+
+
+
+
