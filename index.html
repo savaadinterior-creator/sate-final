@@ -1627,6 +1627,12 @@ footer {
   }
   window.closeMobileNav = closeMobileNav;
 
+  const whatsappIntroMessage = 'Hello Alina, I would like to discuss an interior design project.';
+  const whatsappIntroUrl = `https://wa.me/79996696508?text=${encodeURIComponent(whatsappIntroMessage)}`;
+  document.querySelectorAll('a[href="https://wa.me/79996696508"]').forEach(link => {
+    link.href = whatsappIntroUrl;
+  });
+
   document.querySelectorAll('.accordion').forEach(accordion => {
     const trigger = accordion.querySelector('.acc-trigger');
     if (!trigger) return;
@@ -1741,7 +1747,7 @@ footer {
     const form = e.currentTarget;
     const data = new FormData(form);
     const message = [
-      'Hello Alina, I would like to discuss an interior design project.',
+      whatsappIntroMessage,
       data.get('name') && `Name: ${data.get('name')}`,
       data.get('location') && `Location: ${data.get('location')}`,
       data.get('property') && `Property / service: ${data.get('property')}`,
